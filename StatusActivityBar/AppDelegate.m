@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+//#import "StatusActivityBar.h"
+#import "ViewController.h"
 
 @implementation AppDelegate
 
@@ -20,10 +22,22 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
+    
+    
     self.window.backgroundColor = [UIColor whiteColor];
+    self.window.alpha = 1;
     [self.window makeKeyAndVisible];
+    
+    
+    ViewController *view = [[[ViewController alloc] init] autorelease];
+    self.window.rootViewController = view;
+    
+    
+    
     return YES;
 }
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
